@@ -93,6 +93,9 @@ header {
     }
     .help {
       padding-left: 0.5rem;
+      i:hover {
+        cursor: pointer;
+      }
     }
   }
   .navigation {

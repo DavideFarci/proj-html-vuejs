@@ -191,13 +191,25 @@ export default {
           <div class="col-6">
             <div class="content">
               <img src="../assets/img/cms-banner-01.jpg" alt="" />
-              <div></div>
-              <div></div>
+              <div class="yellow_strip">
+                <span class="strip_content">Most Popular</span>
+              </div>
+              <div class="title_content">
+                <div>The Battelfield 4</div>
+                <div>Naval Strike</div>
+              </div>
             </div>
           </div>
           <div class="col-6">
             <div class="content">
               <img src="../assets/img/cms-banner-02.jpg" alt="" />
+              <div class="yellow_strip">
+                <span class="strip_content">Latest Game</span>
+              </div>
+              <div class="title_content">
+                <div>Assasin's Creed</div>
+                <div>Unity Game</div>
+              </div>
             </div>
           </div>
         </div>
@@ -275,10 +287,28 @@ export default {
       <section class="duble">
         <div class="row">
           <div class="col-6">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/cms-banner-03.jpg" alt="banner-03" />
+              <div class="yellow_strip">
+                <span class="strip_content">20% Discount</span>
+              </div>
+              <div class="title_content">
+                <div>TDragon's Dogma</div>
+                <div>Video Game</div>
+              </div>
+            </div>
           </div>
           <div class="col-6">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/cms-banner-04.jpg" alt="banner-04" />
+              <div class="yellow_strip">
+                <span class="strip_content">30% Discount</span>
+              </div>
+              <div class="title_content">
+                <div>World of Tank</div>
+                <div>New Game</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -571,10 +601,42 @@ main {
     // height: 100%;
     .content {
       background-color: brown;
+      position: relative;
       img {
         width: 100%;
       }
       //   height: 15rem;
+    }
+  }
+  .yellow_strip {
+    background-color: #f9aa01;
+    width: 10rem;
+    height: 1.5rem;
+    transform: skew(-20deg);
+    transform-origin: top right;
+    overflow: hidden;
+    position: absolute;
+    right: 8rem;
+    top: 6rem;
+    text-align: center;
+    .strip_content {
+      font-size: 1.6em;
+      color: #242225;
+      text-align: center;
+      font-weight: bolder;
+      position: relative;
+      bottom: 6px;
+    }
+  }
+  .title_content {
+    font-size: 1.6em;
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+    top: 8rem;
+    right: 6rem;
+    & > * {
+      letter-spacing: 2px;
     }
   }
 }
