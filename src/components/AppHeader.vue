@@ -199,7 +199,7 @@ header {
         position: relative;
         color: #f9aa01;
         right: 25px;
-        bottom: -8px;
+        bottom: -11px;
         font-size: 0.9em;
       }
     }

@@ -27,6 +27,9 @@ nav {
     a {
       text-decoration: none;
       color: white;
+      &:hover {
+        color: #f9aa01;
+      }
     }
   }
 }
