@@ -69,6 +69,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
+  color: white;
   .pre_header {
     display: flex;
     justify-content: space-between;
@@ -87,7 +88,7 @@ header {
     }
   }
   .jumbotron {
-    height: 42rem;
+    height: 37.125rem;
     background-color: brown;
   }
 }
