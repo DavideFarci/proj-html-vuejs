@@ -47,8 +47,10 @@ export default {
     <div class="container">
       <div class="pre_header">
         <div>
-          <span>Wishlist(0)</span>
-          <span>Need Help?<i class="fa-solid fa-chevron-down"></i></span>
+          <span class="wishlist">Wishlist(0)</span>
+          <span class="help"
+            >Need Help?<i class="fa-solid fa-chevron-down px-2 fs-6"></i
+          ></span>
         </div>
         <div>Call 24/7 . 800-8754-987</div>
       </div>
@@ -81,9 +83,17 @@ export default {
 header {
   color: white;
   .pre_header {
+    font-size: 0.9em;
     display: flex;
     justify-content: space-between;
     padding: 0.5rem;
+    .wishlist {
+      padding-right: 0.5rem;
+      border-right: 1px solid #615a65;
+    }
+    .help {
+      padding-left: 0.5rem;
+    }
   }
   .navigation {
     display: flex;
