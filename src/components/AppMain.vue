@@ -186,7 +186,7 @@ export default {
       </section>
 
       <!-- section con 2 col-6 (si ripete) -->
-      <section class="duble">
+      <section class="double">
         <div class="row">
           <div class="col-6">
             <div class="content">
@@ -284,7 +284,7 @@ export default {
       </section>
 
       <!-- altra sezione col-6 -->
-      <section class="duble">
+      <section class="double">
         <div class="row">
           <div class="col-6">
             <div class="content">
@@ -594,7 +594,7 @@ main {
   }
 }
 
-.duble {
+.double {
   margin-top: 3rem;
   .col-6 {
     padding: 1rem;

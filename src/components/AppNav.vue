@@ -21,9 +21,10 @@ nav {
   ul {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     list-style: none;
     padding: 0.5rem;
+    font-size: 1.1em;
     a {
       text-decoration: none;
       color: white;

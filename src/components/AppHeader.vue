@@ -209,7 +209,10 @@ header {
   }
   .jumbotron {
     height: 37.125rem;
-    background-color: brown;
+    // background-color: brown;
+    background-image: url(../assets/img/Far-Cry-4-hidden-ending-Copia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 </style>
