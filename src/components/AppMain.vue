@@ -37,16 +37,48 @@ export default {
       <section class="mini_sec">
         <div class="row">
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <i class="fs-2 fa-solid fa-truck-fast"></i>
+              <div class="info">
+                <div class="name fs-6 fw-bold">Free Shipping</div>
+                <div class="details fs-6 text-dark-emphasis">
+                  Free Shipping On All Order
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <i class="fs-2 fa-solid fa-truck-fast"></i>
+              <div class="info">
+                <div class="name fs-6 fw-bold">Free Shipping</div>
+                <div class="details fs-6 text-dark-emphasis">
+                  Free Shipping On All Order
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <i class="fs-2 fa-solid fa-truck-fast"></i>
+              <div class="info">
+                <div class="name fs-6 fw-bold">Free Shipping</div>
+                <div class="details fs-6 text-dark-emphasis">
+                  Free Shipping On All Order
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <i class="fs-2 fa-solid fa-truck-fast"></i>
+              <div class="info">
+                <div class="name fs-6 fw-bold">Free Shipping</div>
+                <div class="details fs-6 text-dark-emphasis">
+                  Free Shipping On All Order
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -80,6 +112,7 @@ export default {
           <div class="col-2"><div class="content">Best Sellers</div></div>
         </div>
         <div class="row">
+          <i class="fa-regular fa-circle-left"></i>
           <div class="col-3">
             <div class="content">
               <img src="../assets/img/01-300x300.jpg" alt="" />
@@ -106,7 +139,7 @@ export default {
               <div class="product_info">
                 <div class="rating">3 su 5</div>
                 <div class="pro_name">Shopping Mahjong connect</div>
-                <div class="price">£100.00</div>
+                <!-- <div class="price">£100.00</div> -->
                 <div class="buttons">
                   <button><i class="fa-solid fa-bag-shopping"></i></button>
                   <button><i class="fa-solid fa-heart"></i></button>
@@ -126,6 +159,7 @@ export default {
               </div>
             </div>
           </div>
+          <i class="fa-regular fa-circle-right"></i>
         </div>
       </section>
 
@@ -151,18 +185,54 @@ export default {
           <div class="col-2"><div class="content">17 Sec</div></div>
         </div>
         <div class="row">
+          <i class="fa-regular fa-circle-left"></i>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/01-300x300.jpg" alt="" />
+              <div class="product_info">
+                <div class="rating">3 su 5</div>
+                <div class="pro_name">Shopping Mahjong connect</div>
+                <div class="price">£100.00</div>
+              </div>
+            </div>
           </div>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/01-300x300.jpg" alt="" />
+              <div class="product_info">
+                <div class="rating">3 su 5</div>
+                <div class="pro_name">Shopping Mahjong connect</div>
+                <div class="price">£100.00</div>
+              </div>
+            </div>
           </div>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/01-300x300.jpg" alt="" />
+              <div class="product_info">
+                <div class="rating">3 su 5</div>
+                <div class="pro_name">Shopping Mahjong connect</div>
+                <!-- <div class="price">£100.00</div> -->
+                <div class="buttons">
+                  <button><i class="fa-solid fa-bag-shopping"></i></button>
+                  <button><i class="fa-solid fa-heart"></i></button>
+                  <button><i class="fa-solid fa-maximize"></i></button>
+                  <button><i class="fa-solid fa-eye"></i></button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/01-300x300.jpg" alt="" />
+              <div class="product_info">
+                <div class="rating">3 su 5</div>
+                <div class="pro_name">Shopping Mahjong connect</div>
+                <div class="price">£100.00</div>
+              </div>
+            </div>
           </div>
+          <i class="fa-regular fa-circle-right"></i>
         </div>
       </section>
     </div>
@@ -195,19 +265,29 @@ export default {
       <section class="mini_sec_var">
         <div class="row">
           <div class="col-2">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/brand-01.png" alt="" />
+            </div>
           </div>
           <div class="col-2">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/brand-02.png" alt="" />
+            </div>
           </div>
           <div class="col-2">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/brand-03.png" alt="" />
+            </div>
           </div>
           <div class="col-2">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/brand-04.png" alt="" />
+            </div>
           </div>
           <div class="col-2">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/brand-05.png" alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -229,8 +309,9 @@ main {
     padding: 1rem;
     height: 100%;
     .content {
-      background-color: brown;
-      height: 5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
     }
   }
 }
@@ -256,6 +337,7 @@ main {
 
 .carousel {
   margin-top: 3rem;
+  position: relative;
   .row {
     justify-content: center;
     .col-2 {
@@ -268,6 +350,20 @@ main {
         text-align: center;
       }
     }
+  }
+  .fa-circle-left {
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  .fa-circle-right {
+    position: absolute;
+    left: 78.4rem;
+    bottom: 40%;
+    font-size: 1.4em;
+    cursor: pointer;
   }
   .col-3 {
     padding: 1rem;
@@ -283,7 +379,7 @@ main {
             background-color: #170e1f;
             color: white;
             width: calc(100% / 4);
-            border: 1px solid white;
+            border: 1px solid #242225;
             font-size: 0.8em;
             padding: 0.1rem 0;
           }
@@ -326,10 +422,8 @@ main {
     .col-2 {
       padding: 1rem;
       height: 100%;
-      .content {
-        background-color: brown;
-        height: 5rem;
-      }
+      padding: 2rem 0;
+      border-top: 1px solid #37343a;
     }
   }
 }
