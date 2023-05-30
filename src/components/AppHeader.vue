@@ -57,9 +57,19 @@ export default {
         <img src="../assets/img/logo.png" alt="logo" />
         <AppNav :dataNav="this.navbar" />
         <div class="myAccount">
-          <div><i class="fa-solid fa-magnifying-glass"></i></div>
-          <div><i class="fa-regular fa-user"></i></div>
-          <div><i class="fa-solid fa-bag-shopping"></i>(0)£0.00</div>
+          <div class="i_search">
+            <div class="regular"></div>
+            <div class="hover"></div>
+          </div>
+          <div class="i_account">
+            <div class="regular"></div>
+            <div class="hover"></div>
+          </div>
+          <div class="i_cart">
+            <div class="regular"></div>
+            <div class="hover"></div>
+          </div>
+          <span class="cart_price">(0)£0.00</span>
         </div>
       </div>
     </div>
@@ -85,6 +95,103 @@ header {
       display: flex;
       gap: 1rem;
       padding: 0.5rem;
+      .i_search {
+        position: relative;
+        .regular {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          background-image: url(/src/assets/img/nav-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -64px;
+          z-index: 10;
+          &:hover {
+            z-index: 0;
+          }
+        }
+        .hover {
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          background-image: url(/src/assets/img/nav-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: 7px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 0;
+          &:hover {
+            z-index: 10;
+          }
+        }
+      }
+      .i_account {
+        position: relative;
+        .regular {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          background-image: url(/src/assets/img/nav-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -206px;
+          z-index: 10;
+          &:hover {
+            z-index: 0;
+          }
+        }
+        .hover {
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          background-image: url(/src/assets/img/nav-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -134px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 0;
+          &:hover {
+            z-index: 10;
+          }
+        }
+      }
+      .i_cart {
+        position: relative;
+        .regular {
+          position: relative;
+          width: 40px;
+          height: 40px;
+          background-image: url(/src/assets/img/nav-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -350px;
+          z-index: 10;
+          &:hover {
+            z-index: 0;
+          }
+        }
+        .hover {
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          background-image: url(/src/assets/img/nav-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -278px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 0;
+          &:hover {
+            z-index: 10;
+          }
+        }
+      }
+      .cart_price {
+        position: relative;
+        color: #f9aa01;
+        right: 25px;
+        bottom: -8px;
+        font-size: 0.9em;
+      }
     }
   }
   .jumbotron {

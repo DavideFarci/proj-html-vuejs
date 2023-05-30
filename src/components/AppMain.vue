@@ -33,16 +33,85 @@ export default {
           description: "lorem ispsum dolor",
         },
         {
-          image: "Nisi-ut-aliquid-ex-ea-com.jpg",
-          date: "Jan 18,2021",
-          comments: "0",
+          image: "Illo-inventore-veritatis-quasi.jpg",
+          date: "May 30,2021",
+          comments: "12",
           description: "lorem ispsum dolor",
         },
         {
-          image: "Nisi-ut-aliquid-ex-ea-com.jpg",
-          date: "Jan 18,2021",
-          comments: "0",
+          image: "At-vero-eos-et-accusamus.jpg",
+          date: "Apr 13,2021",
+          comments: "3",
           description: "lorem ispsum dolor",
+        },
+      ],
+      footerLinks: [
+        {
+          addressInfo: [
+            {
+              address: `60 29th Street San Francisco, CA 94110 507-Union Trade Center, United States of America`,
+              mobile: `(+00) 123-456-789`,
+              mail: `demo@example.com`,
+            },
+          ],
+        },
+        {
+          information: [
+            {
+              name: "Bookmark",
+              link: "#",
+              id: 1,
+            },
+            {
+              name: "Features",
+              link: "#",
+              id: 2,
+            },
+            {
+              name: "Sitemap",
+              link: "#",
+              id: 3,
+            },
+            {
+              name: "Lists",
+              link: "#",
+              id: 4,
+            },
+            {
+              name: "Contact Us",
+              link: "#",
+              id: 5,
+            },
+          ],
+        },
+        {
+          extras: [
+            {
+              name: "Delivery",
+              link: "#",
+              id: 1,
+            },
+            {
+              name: "Cart",
+              link: "#",
+              id: 2,
+            },
+            {
+              name: "Terms conditions",
+              link: "#",
+              id: 3,
+            },
+            {
+              name: "My account",
+              link: "#",
+              id: 4,
+            },
+            {
+              name: "About us",
+              link: "#",
+              id: 5,
+            },
+          ],
         },
       ],
     };
@@ -59,7 +128,10 @@ export default {
         <div class="row">
           <div class="col-3">
             <div class="content">
-              <i class="fs-2 fa-solid fa-truck-fast"></i>
+              <div class="icon_delivery">
+                <div class="standard"></div>
+                <div class="hover"></div>
+              </div>
               <div class="info">
                 <div class="name fs-6 fw-bold">Free Shipping</div>
                 <div class="details fs-6 text-dark-emphasis">
@@ -70,7 +142,10 @@ export default {
           </div>
           <div class="col-3">
             <div class="content">
-              <i class="fs-2 fa-solid fa-truck-fast"></i>
+              <div class="icon_money">
+                <div class="standard"></div>
+                <div class="hover"></div>
+              </div>
               <div class="info">
                 <div class="name fs-6 fw-bold">Free Shipping</div>
                 <div class="details fs-6 text-dark-emphasis">
@@ -81,7 +156,10 @@ export default {
           </div>
           <div class="col-3">
             <div class="content">
-              <i class="fs-2 fa-solid fa-truck-fast"></i>
+              <div class="icon_member">
+                <div class="standard"></div>
+                <div class="hover"></div>
+              </div>
               <div class="info">
                 <div class="name fs-6 fw-bold">Free Shipping</div>
                 <div class="details fs-6 text-dark-emphasis">
@@ -92,7 +170,10 @@ export default {
           </div>
           <div class="col-3">
             <div class="content">
-              <i class="fs-2 fa-solid fa-truck-fast"></i>
+              <div class="icon_policy">
+                <div class="standard"></div>
+                <div class="hover"></div>
+              </div>
               <div class="info">
                 <div class="name fs-6 fw-bold">Free Shipping</div>
                 <div class="details fs-6 text-dark-emphasis">
@@ -108,10 +189,16 @@ export default {
       <section class="duble">
         <div class="row">
           <div class="col-6">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/cms-banner-01.jpg" alt="" />
+              <div></div>
+              <div></div>
+            </div>
           </div>
           <div class="col-6">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/cms-banner-02.jpg" alt="" />
+            </div>
           </div>
         </div>
       </section>
@@ -261,7 +348,22 @@ export default {
     <!-- sezone a tutto schermo -->
     <section class="full_background">
       <div class="col-7">
-        <div class="content"></div>
+        <div class="content">
+          <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
+          <img src="../assets/img/t5-1-100x100_left.jpg" alt="" />
+          <div>Luies Charls<span>(Web Designer)</span></div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
+            exercitationem quam sunt suscipit voluptates quaerat aliquam
+            officiis, porro voluptatibus ut sit quia quisquam sint, hic aperiam.
+            Saepe, laboriosam! Provident, repellendus!
+          </div>
+          <div>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-solid fa-circle"></i>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -325,6 +427,139 @@ main {
       display: flex;
       align-items: center;
       gap: 1rem;
+      // non aprire questi 4 (pericolo di morte!)
+      .icon_delivery {
+        position: relative;
+        .standard {
+          cursor: pointer;
+          position: relative;
+          z-index: 10;
+          width: 60px;
+          height: 50px;
+          background-image: url(../assets/img/service-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -104px;
+          z-index: 10;
+          &:hover {
+            z-index: 0;
+          }
+        }
+
+        .hover {
+          cursor: pointer;
+          z-index: 0;
+          width: 60px;
+          height: 50px;
+          background-image: url(../assets/img/service-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: 11px;
+          position: absolute;
+          left: 0px;
+          bottom: 2px;
+          &:hover {
+            z-index: 10;
+          }
+        }
+      }
+      .icon_money {
+        position: relative;
+        .standard {
+          cursor: pointer;
+          position: relative;
+          z-index: 10;
+          width: 60px;
+          height: 50px;
+          background-image: url(../assets/img/service-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -336px;
+          z-index: 10;
+          &:hover {
+            z-index: 0;
+          }
+        }
+
+        .hover {
+          cursor: pointer;
+          z-index: 0;
+          width: 60px;
+          height: 50px;
+          background-image: url(../assets/img/service-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -220px;
+          position: absolute;
+          left: 0px;
+          bottom: 2px;
+          &:hover {
+            z-index: 10;
+          }
+        }
+      }
+      .icon_member {
+        position: relative;
+        .standard {
+          cursor: pointer;
+          position: relative;
+          z-index: 10;
+          width: 60px;
+          height: 50px;
+          background-image: url(../assets/img/service-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -557px;
+          z-index: 10;
+          &:hover {
+            z-index: 0;
+          }
+        }
+
+        .hover {
+          cursor: pointer;
+          z-index: 0;
+          width: 60px;
+          height: 50px;
+          background-image: url(../assets/img/service-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -441px;
+          position: absolute;
+          left: 0px;
+          bottom: 2px;
+          &:hover {
+            z-index: 10;
+          }
+        }
+      }
+      .icon_policy {
+        position: relative;
+        .standard {
+          cursor: pointer;
+          position: relative;
+          z-index: 10;
+          width: 60px;
+          height: 50px;
+          background-image: url(../assets/img/service-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -786px;
+          z-index: 10;
+          &:hover {
+            z-index: 0;
+          }
+        }
+
+        .hover {
+          cursor: pointer;
+          z-index: 0;
+          width: 60px;
+          height: 50px;
+          background-image: url(../assets/img/service-icon.png);
+          background-repeat: no-repeat;
+          background-position-y: -671px;
+          position: absolute;
+          left: 0px;
+          bottom: 2px;
+          &:hover {
+            z-index: 10;
+          }
+        }
+      }
     }
   }
 }
@@ -333,10 +568,13 @@ main {
   margin-top: 3rem;
   .col-6 {
     padding: 1rem;
-    height: 100%;
+    // height: 100%;
     .content {
       background-color: brown;
-      height: 15rem;
+      img {
+        width: 100%;
+      }
+      //   height: 15rem;
     }
   }
 }
@@ -365,6 +603,7 @@ main {
     }
   }
   .fa-circle-left {
+    display: inline-block;
     position: absolute;
     left: 0;
     bottom: 40%;
@@ -372,6 +611,7 @@ main {
     cursor: pointer;
   }
   .fa-circle-right {
+    display: inline-block;
     position: absolute;
     left: 78.4rem;
     bottom: 40%;
@@ -412,8 +652,32 @@ main {
   align-items: center;
   margin-top: 3rem;
   .col-7 {
-    background-color: rgba(252, 2, 2, 0.486);
     height: 20rem;
+    text-align: center;
+    padding: 1rem;
+    .content {
+      position: relative;
+      & > * {
+        margin-bottom: 1rem;
+      }
+
+      .fa-quote-left {
+        padding: 0.3rem;
+        background-color: #f9aa01;
+        border-radius: 50%;
+        position: absolute;
+        left: 32.5rem;
+        top: 1.3rem;
+      }
+      img {
+        border-radius: 50%;
+        border: 4px solid #f9aa01;
+      }
+      .fa-circle {
+        font-size: 0.9em;
+        margin-right: 0.5rem;
+      }
+    }
   }
 }
 
