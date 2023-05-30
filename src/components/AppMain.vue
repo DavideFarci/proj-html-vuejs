@@ -81,16 +81,50 @@ export default {
         </div>
         <div class="row">
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/01-300x300.jpg" alt="" />
+              <div class="product_info">
+                <div class="rating">3 su 5</div>
+                <div class="pro_name">Shopping Mahjong connect</div>
+                <div class="price">£100.00</div>
+              </div>
+            </div>
           </div>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/01-300x300.jpg" alt="" />
+              <div class="product_info">
+                <div class="rating">3 su 5</div>
+                <div class="pro_name">Shopping Mahjong connect</div>
+                <div class="price">£100.00</div>
+              </div>
+            </div>
           </div>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/01-300x300.jpg" alt="" />
+              <div class="product_info">
+                <div class="rating">3 su 5</div>
+                <div class="pro_name">Shopping Mahjong connect</div>
+                <div class="price">£100.00</div>
+                <div class="buttons">
+                  <button><i class="fa-solid fa-bag-shopping"></i></button>
+                  <button><i class="fa-solid fa-heart"></i></button>
+                  <button><i class="fa-solid fa-maximize"></i></button>
+                  <button><i class="fa-solid fa-eye"></i></button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <img src="../assets/img/01-300x300.jpg" alt="" />
+              <div class="product_info">
+                <div class="rating">3 su 5</div>
+                <div class="pro_name">Shopping Mahjong connect</div>
+                <div class="price">£100.00</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -237,10 +271,24 @@ main {
   }
   .col-3 {
     padding: 1rem;
-    height: 17rem;
     .content {
       background-color: brown;
-      height: 100%;
+      img {
+        width: 100%;
+      }
+      .product_info {
+        background-color: #170e1f;
+        .buttons {
+          button {
+            background-color: #170e1f;
+            color: white;
+            width: calc(100% / 4);
+            border: 1px solid white;
+            font-size: 0.8em;
+            padding: 0.1rem 0;
+          }
+        }
+      }
     }
   }
 }
