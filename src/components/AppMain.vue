@@ -1,4 +1,5 @@
 <script>
+import AppBlogCard from "./AppBlogCard.vue";
 import AppCard from "./AppCard.vue";
 
 export default {
@@ -24,9 +25,29 @@ export default {
           shop: "Shop Now",
         },
       ],
+      blogCards: [
+        {
+          image: "Nisi-ut-aliquid-ex-ea-com.jpg",
+          date: "Jan 18,2021",
+          comments: "0",
+          description: "lorem ispsum dolor",
+        },
+        {
+          image: "Nisi-ut-aliquid-ex-ea-com.jpg",
+          date: "Jan 18,2021",
+          comments: "0",
+          description: "lorem ispsum dolor",
+        },
+        {
+          image: "Nisi-ut-aliquid-ex-ea-com.jpg",
+          date: "Jan 18,2021",
+          comments: "0",
+          description: "lorem ispsum dolor",
+        },
+      ],
     };
   },
-  components: { AppCard },
+  components: { AppCard, AppBlogCard },
 };
 </script>
 
@@ -249,15 +270,7 @@ export default {
       <section class="new_game_blogs">
         <h2>New Game Blog</h2>
         <div class="row">
-          <div class="col-4">
-            <div class="content"></div>
-          </div>
-          <div class="col-4">
-            <div class="content"></div>
-          </div>
-          <div class="col-4">
-            <div class="content"></div>
-          </div>
+          <AppBlogCard v-for="blog in blogCards" :dataBlog="blog" />
         </div>
       </section>
 
@@ -406,13 +419,6 @@ main {
 
 .new_game_blogs {
   margin-top: 3rem;
-  .col-4 {
-    padding: 1rem;
-    .content {
-      background-color: brown;
-      height: 17rem;
-    }
-  }
 }
 
 .mini_sec_var {
