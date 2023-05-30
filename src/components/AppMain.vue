@@ -1,5 +1,33 @@
 <script>
-export default {};
+import AppCard from "./AppCard.vue";
+
+export default {
+  data() {
+    return {
+      cards: [
+        {
+          id: 1,
+          image: "category-image-01-446x550_t.jpg",
+          name: "Batman",
+          shop: "Shop Now",
+        },
+        {
+          id: 2,
+          image: "category-image-02-446x550_t.jpg",
+          name: "Bayonetta",
+          shop: "Shop Now",
+        },
+        {
+          id: 3,
+          image: "category-image-03-446x550_t.jpg",
+          name: "Dark Souls",
+          shop: "Shop Now",
+        },
+      ],
+    };
+  },
+  components: { AppCard },
+};
 </script>
 
 <template>
@@ -39,15 +67,7 @@ export default {};
       <section class="special_category">
         <h2>Special Category</h2>
         <div class="row">
-          <div class="col-4">
-            <div class="content"></div>
-          </div>
-          <div class="col-4">
-            <div class="content"></div>
-          </div>
-          <div class="col-4">
-            <div class="content"></div>
-          </div>
+          <AppCard v-for="card in cards" :key="card.id" :cardInfo="card" />
         </div>
       </section>
 
@@ -195,14 +215,8 @@ main {
 
 .special_category {
   margin-top: 5rem;
-  .col-4 {
-    padding: 1rem;
-    height: 100%;
-    .content {
-      background-color: brown;
-      height: 24rem;
-      aspect-ratio: 1 / 1;
-    }
+  .row {
+    justify-content: center;
   }
 }
 
