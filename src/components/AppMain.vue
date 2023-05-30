@@ -518,7 +518,7 @@ main {
           height: 50px;
           background-image: url(../assets/img/service-icon.png);
           background-repeat: no-repeat;
-          background-position-y: -441px;
+          background-position-y: -442px;
           position: absolute;
           left: 0px;
           bottom: 2px;

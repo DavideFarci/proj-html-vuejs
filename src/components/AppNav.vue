@@ -24,6 +24,10 @@ nav {
     gap: 1rem;
     list-style: none;
     padding: 0.5rem;
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 </style>
