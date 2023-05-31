@@ -42,6 +42,15 @@ export default {
     }
     .info_blog {
       background-color: #170e1f;
+      padding: 0.5rem;
+      span {
+        font-size: 0.9em;
+        font-weight: bold;
+      }
+      i {
+        color: #f9aa01;
+        font-size: 0.9em;
+      }
     }
   }
 }
