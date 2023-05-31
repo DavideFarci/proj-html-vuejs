@@ -643,6 +643,16 @@ main {
 
 .special_category {
   margin-top: 5rem;
+  h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 45px;
+    background-color: #f9aa01;
+    position: relative;
+    left: 39rem;
+    bottom: -5px;
+  }
   .row {
     justify-content: center;
   }
@@ -651,6 +661,16 @@ main {
 .carousel {
   margin-top: 3rem;
   position: relative;
+  h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 45px;
+    background-color: #f9aa01;
+    position: relative;
+    left: 39rem;
+    bottom: -5px;
+  }
   .row {
     justify-content: center;
     .col-2 {
