@@ -127,6 +127,7 @@ export default {
   padding: 1rem;
   .content {
     background-color: brown;
+    cursor: pointer;
     img {
       width: 100%;
     }

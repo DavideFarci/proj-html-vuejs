@@ -283,7 +283,9 @@ export default {
       <section class="carousel">
         <h2 class="fs-1">Our Products</h2>
         <div class="row">
-          <div class="col-2"><div class="content">Featured</div></div>
+          <div class="col-2">
+            <div style="color: #f9aa01" class="content">Featured</div>
+          </div>
           <div class="col-2"><div class="content">New Arrival</div></div>
           <div class="col-2"><div class="content">Best Sellers</div></div>
         </div>
@@ -337,20 +339,6 @@ export default {
     <section class="full_background">
       <div class="col-7">
         <div class="content">
-          <!-- <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-          <img :src="`src/assets/img/${this.partners[0].image}`" alt="" />
-          <div>Luies Charls<span>(Web Designer)</span></div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
-            exercitationem quam sunt suscipit voluptates quaerat aliquam
-            officiis, porro voluptatibus ut sit quia quisquam sint, hic aperiam.
-            Saepe, laboriosam! Provident, repellendus!
-          </div>
-          <div>
-            <i class="fa-solid fa-circle"></i>
-            <i class="fa-solid fa-circle"></i>
-            <i class="fa-solid fa-circle"></i>
-          </div> -->
           <div
             id="carouselExampleAutoplaying"
             class="carousel slide"
