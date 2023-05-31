@@ -97,7 +97,12 @@ export default {
               <ul>
                 <h3>Address Info</h3>
                 <li v-for="info in footerLinks[0].information" :key="info.id">
-                  <a :href="info.link">{{ info.name }}</a>
+                  <a
+                    onmouseover="this.style.color = '#f9aa01';"
+                    onmouseout="this.style.color = 'grey';"
+                    :href="info.link"
+                    >{{ info.name }}</a
+                  >
                 </li>
               </ul>
             </div>
@@ -107,7 +112,12 @@ export default {
               <ul>
                 <h3>Address Info</h3>
                 <li v-for="extra in footerLinks[1].extras" :key="extra.id">
-                  <a :href="extra.link">{{ extra.name }}</a>
+                  <a
+                    onmouseover="this.style.color = '#f9aa01';"
+                    onmouseout="this.style.color = 'grey';"
+                    :href="extra.link"
+                    >{{ extra.name }}</a
+                  >
                 </li>
               </ul>
             </div>
