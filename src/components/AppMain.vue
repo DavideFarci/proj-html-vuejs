@@ -349,8 +349,8 @@ export default {
                 <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
                 <img :src="`src/assets/img/${this.partners[0].image}`" alt="" />
                 <div>
-                  {{ this.partners[0].name
-                  }}<span>{{ this.partners[0].role }}</span>
+                  {{ this.partners[0].name }}
+                  <span>{{ this.partners[0].role }}</span>
                 </div>
                 <div>
                   {{ this.partners[0].description }}
@@ -366,7 +366,7 @@ export default {
                 <img :src="`src/assets/img/${this.partners[1].image}`" alt="" />
                 <div>
                   {{ this.partners[1].name
-                  }}<span>{{ this.partners[1].role }}</span>
+                  }}<span> {{ this.partners[1].role }}</span>
                 </div>
                 <div>
                   {{ this.partners[1].description }}
@@ -381,8 +381,8 @@ export default {
                 <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
                 <img :src="`src/assets/img/${this.partners[2].image}`" alt="" />
                 <div>
-                  {{ this.partners[2].name
-                  }}<span>{{ this.partners[2].role }}</span>
+                  {{ this.partners[2].name }}
+                  <span>{{ this.partners[2].role }}</span>
                 </div>
                 <div>
                   {{ this.partners[2].description }}
@@ -727,6 +727,9 @@ main {
     padding: 1rem;
     .content {
       position: relative;
+      .carousel-item span {
+        color: #f9aa01;
+      }
       .carousel-item > :nth-child(n + 2) {
         margin-bottom: 1rem;
       }
