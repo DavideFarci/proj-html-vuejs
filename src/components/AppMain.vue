@@ -217,7 +217,7 @@ export default {
 
       <!-- sezione con card -->
       <section class="special_category">
-        <h2>Special Category</h2>
+        <h2 class="fs-1">Special Category</h2>
         <div class="row">
           <AppCard v-for="card in cards" :key="card.id" :cardInfo="card" />
         </div>
@@ -225,7 +225,7 @@ export default {
 
       <!-- carosello prodotti da ripetere = deal of the day -->
       <section class="carousel">
-        <h2>Our Products</h2>
+        <h2 class="fs-1">Our Products</h2>
         <div class="row">
           <div class="col-2"><div class="content">Featured</div></div>
           <div class="col-2"><div class="content">New Arrival</div></div>
@@ -315,7 +315,7 @@ export default {
 
       <!-- secondo carosello -->
       <section class="carousel">
-        <h2>Deal Of The Day</h2>
+        <h2 class="fs-1">Deal Of The Day</h2>
         <div class="row">
           <div class="col-2"><div class="content">1026 Days</div></div>
           <div class="col-2"><div class="content">13 Hours</div></div>
@@ -400,7 +400,7 @@ export default {
     <div class="container">
       <!-- sezione blog -->
       <section class="new_game_blogs">
-        <h2>New Game Blog</h2>
+        <h2 class="fs-1">New Game Blog</h2>
         <div class="row">
           <AppBlogCard v-for="blog in blogCards" :dataBlog="blog" />
         </div>

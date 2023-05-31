@@ -30,10 +30,23 @@ export default {
     }
     .card_info {
       background-color: rgba(0, 0, 0, 0.377);
+      padding: 1rem;
       position: absolute;
       bottom: 0;
       right: 0;
       left: 0;
+      .title {
+        font-size: 1.1em;
+        font-weight: bolder;
+        margin-bottom: 0.5rem;
+      }
+      .shop {
+        color: #f9aa01;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
