@@ -214,7 +214,6 @@ footer {
             width: 19rem;
           }
           .send {
-            cursor: pointer;
             height: 2rem;
             width: 2rem;
             background-image: url(/src/assets/img/newsletter.png);
@@ -224,13 +223,13 @@ footer {
             position: absolute;
             left: 17rem;
             bottom: -1px;
+            z-index: 10;
             &:hover {
-              display: none;
+              z-index: 0;
             }
           }
           .send_hover {
             cursor: pointer;
-            display: none;
             height: 2rem;
             width: 2rem;
             background-image: url(/src/assets/img/newsletter.png);
@@ -240,8 +239,9 @@ footer {
             position: absolute;
             left: 17rem;
             bottom: -1px;
+            z-index: 0;
             &:hover {
-              display: inline-block;
+              z-index: 10;
             }
           }
         }
