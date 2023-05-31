@@ -178,6 +178,11 @@ export default {
 
 <template>
   <main>
+    <a href="#header">
+      <div class="square">
+        <i class="fa-solid fa-chevron-up"></i>
+      </div>
+    </a>
     <div class="container">
       <!-- section piccola con 4 elementi in riga -->
       <section class="mini_sec">
@@ -473,6 +478,24 @@ main {
     text-align: center;
     margin-bottom: 1.5rem;
   }
+  .square {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    transform: rotate(43deg);
+    position: fixed;
+    right: 19px;
+    bottom: 50%;
+    background-color: #f9aa01;
+  }
+
+  .fa-chevron-up {
+    position: absolute;
+    top: 31%;
+    left: 30%;
+    transform: rotate(-42deg);
+    color: #fff;
+  }
 }
 .mini_sec {
   margin-top: 3rem;
@@ -756,6 +779,16 @@ main {
 
 .new_game_blogs {
   margin-top: 3rem;
+  h2::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 45px;
+    background-color: #f9aa01;
+    position: relative;
+    left: 39rem;
+    bottom: -5px;
+  }
 }
 
 .mini_sec_var {

@@ -43,7 +43,7 @@ export default {
 </script>
 
 <template>
-  <header>
+  <header id="header">
     <div class="container">
       <div class="pre_header">
         <div>
