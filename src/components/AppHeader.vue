@@ -75,7 +75,18 @@ export default {
         </div>
       </div>
     </div>
-    <div class="jumbotron"></div>
+    <div class="jumbotron">
+      <div class="over_text">
+        <div class="yellow_strip">
+          <span class="strip_content">Upcoming Stock</span>
+        </div>
+        <div class="title_content">
+          <div>Far Cry 4</div>
+          <div>Video Game</div>
+        </div>
+        <button>Shop Now</button>
+      </div>
+    </div>
   </header>
 </template>
 
@@ -213,6 +224,50 @@ header {
     background-image: url(../assets/img/Far-Cry-4-hidden-ending-Copia.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    .over_text {
+      padding-left: 32rem;
+      .yellow_strip {
+        background-color: #f9aa01;
+        width: 15rem;
+        height: 2rem;
+        transform: skew(-20deg);
+        transform-origin: top right;
+        overflow: hidden;
+        margin-bottom: 4rem;
+        // position: absolute;
+        // right: 8rem;
+        // top: 6rem;
+        text-align: center;
+        .strip_content {
+          font-size: 1.9em;
+          color: #242225;
+          text-align: center;
+          font-weight: bolder;
+          position: relative;
+          bottom: 6px;
+        }
+      }
+      .title_content {
+        font-size: 3em;
+        font-weight: bolder;
+        color: white;
+        margin-bottom: 4rem;
+        // position: absolute;
+        // top: 8rem;
+        // right: 6rem;
+        & > * {
+          letter-spacing: 2px;
+        }
+      }
+      button {
+        padding: 0.4rem 1.5rem;
+        &:hover {
+          background-color: #f9aa01;
+        }
+      }
+    }
   }
 }
 </style>
