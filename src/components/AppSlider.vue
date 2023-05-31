@@ -30,7 +30,7 @@ export default {
                     'fa-star': star > convertedVote,
                   }"
                 ></i>
-                <div class="pro_name">{{ card.description }}</div>
+                <div class="pro_name fw-bolder">{{ card.description }}</div>
                 <div class="price">{{ card.price }}</div>
               </div>
             </div>
@@ -132,6 +132,14 @@ export default {
     }
     .product_info {
       background-color: #170e1f;
+      padding: 0.5rem;
+      i {
+        color: #f9aa01;
+      }
+      .price {
+        font-size: 0.9em;
+        color: #f9aa01;
+      }
       .price:hover {
         display: none;
         z-index: 0;
