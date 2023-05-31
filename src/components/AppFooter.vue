@@ -149,10 +149,18 @@ export default {
       <div class="footer_down">
         <div class="row">
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              Copyright <i class="fa-regular fa-copyright"></i> 2023 Codezeel
+            </div>
           </div>
           <div class="col-3">
-            <div class="content"></div>
+            <div class="content">
+              <div class="am_ex"></div>
+              <div class="discover"></div>
+              <div class="masterC"></div>
+              <div class="pay"></div>
+              <div class="visa"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -266,8 +274,44 @@ footer {
       .col-3 {
         padding: 0.5rem;
         .content {
-          background-color: rgba(252, 2, 2, 0.486);
-          height: 2rem;
+          display: flex;
+          gap: 0.5rem;
+          color: white;
+          .am_ex {
+            height: 26px;
+            width: 43px;
+            background-image: url(/src/assets/img/payments.png);
+            background-repeat: no-repeat;
+            background-position-y: -237px;
+          }
+          .discover {
+            height: 26px;
+            width: 43px;
+            background-image: url(/src/assets/img/payments.png);
+            background-repeat: no-repeat;
+            background-position-y: -197px;
+          }
+          .masterC {
+            height: 26px;
+            width: 43px;
+            background-image: url(/src/assets/img/payments.png);
+            background-repeat: no-repeat;
+            background-position-y: -76px;
+          }
+          .pay {
+            height: 26px;
+            width: 43px;
+            background-image: url(/src/assets/img/payments.png);
+            background-repeat: no-repeat;
+            background-position-y: -116px;
+          }
+          .visa {
+            height: 26px;
+            width: 43px;
+            background-image: url(/src/assets/img/payments.png);
+            background-repeat: no-repeat;
+            background-position-y: 0px;
+          }
         }
       }
     }
