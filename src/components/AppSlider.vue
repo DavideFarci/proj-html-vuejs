@@ -125,6 +125,7 @@ export default {
 // }
 .col-3 {
   padding: 1rem;
+
   .content {
     background-color: brown;
     cursor: pointer;
@@ -163,5 +164,18 @@ export default {
       }
     }
   }
+}
+
+.carousel-inner {
+  position: relative;
+}
+.carousel-control-prev-icon {
+  position: absolute;
+  left: -34px;
+}
+
+.carousel-control-next {
+  position: absolute;
+  right: -110px;
 }
 </style>

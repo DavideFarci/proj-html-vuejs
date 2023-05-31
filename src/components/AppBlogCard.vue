@@ -9,7 +9,9 @@ export default {
 <template>
   <div class="col-4">
     <div class="content">
-      <img :src="`src/assets/img/${dataBlog.image}`" :alt="dataBlog.image" />
+      <div class="img_container">
+        <img :src="`src/assets/img/${dataBlog.image}`" :alt="dataBlog.image" />
+      </div>
       <div class="info_blog">
         <div class="d-flex justify-content-between px-2">
           <div>
