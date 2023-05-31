@@ -267,7 +267,7 @@ footer {
     }
   }
   .footer_down {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0;
     margin-top: 2.5rem;
     .row {
       justify-content: space-between;
