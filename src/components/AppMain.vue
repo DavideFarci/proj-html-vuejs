@@ -1,6 +1,7 @@
 <script>
 import AppBlogCard from "./AppBlogCard.vue";
 import AppCard from "./AppCard.vue";
+import AppSlider from "./AppSlider.vue";
 
 export default {
   data() {
@@ -114,9 +115,35 @@ export default {
           ],
         },
       ],
+      cardsSlider: [
+        {
+          image: "01-300x300.jpg",
+          rate: 3,
+          description: "Shopping Mahjong connect",
+          price: "£100.00",
+        },
+        {
+          image: "04-300x300.jpg",
+          rate: 4,
+          description: "Shopping Mahjong connect",
+          price: "£100.00",
+        },
+        {
+          image: "09-300x300.jpg",
+          rate: 0,
+          description: "Buddy and Lucky Solitair",
+          price: "$83.90 - £90.00",
+        },
+        {
+          image: "11-300x300.jpg",
+          rate: 2,
+          description: "Labirinths of the Worlf",
+          price: "$110.00",
+        },
+      ],
     };
   },
-  components: { AppCard, AppBlogCard },
+  components: { AppCard, AppBlogCard, AppSlider },
 };
 </script>
 
@@ -231,56 +258,7 @@ export default {
           <div class="col-2"><div class="content">New Arrival</div></div>
           <div class="col-2"><div class="content">Best Sellers</div></div>
         </div>
-        <div class="row">
-          <i class="fa-regular fa-circle-left"></i>
-          <div class="col-3">
-            <div class="content">
-              <img src="../assets/img/01-300x300.jpg" alt="" />
-              <div class="product_info">
-                <div class="rating">3 su 5</div>
-                <div class="pro_name">Shopping Mahjong connect</div>
-                <div class="price">£100.00</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="content">
-              <img src="../assets/img/01-300x300.jpg" alt="" />
-              <div class="product_info">
-                <div class="rating">3 su 5</div>
-                <div class="pro_name">Shopping Mahjong connect</div>
-                <div class="price">£100.00</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="content">
-              <img src="../assets/img/01-300x300.jpg" alt="" />
-              <div class="product_info">
-                <div class="rating">3 su 5</div>
-                <div class="pro_name">Shopping Mahjong connect</div>
-                <!-- <div class="price">£100.00</div> -->
-                <div class="buttons">
-                  <button><i class="fa-solid fa-bag-shopping"></i></button>
-                  <button><i class="fa-solid fa-heart"></i></button>
-                  <button><i class="fa-solid fa-maximize"></i></button>
-                  <button><i class="fa-solid fa-eye"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="content">
-              <img src="../assets/img/01-300x300.jpg" alt="" />
-              <div class="product_info">
-                <div class="rating">3 su 5</div>
-                <div class="pro_name">Shopping Mahjong connect</div>
-                <div class="price">£100.00</div>
-              </div>
-            </div>
-          </div>
-          <i class="fa-regular fa-circle-right"></i>
-        </div>
+        <AppSlider :sliderData="this.cardsSlider" />
       </section>
 
       <!-- altra sezione col-6 -->
@@ -322,56 +300,7 @@ export default {
           <div class="col-2"><div class="content">24 Min</div></div>
           <div class="col-2"><div class="content">17 Sec</div></div>
         </div>
-        <div class="row">
-          <i class="fa-regular fa-circle-left"></i>
-          <div class="col-3">
-            <div class="content">
-              <img src="../assets/img/01-300x300.jpg" alt="" />
-              <div class="product_info">
-                <div class="rating">3 su 5</div>
-                <div class="pro_name">Shopping Mahjong connect</div>
-                <div class="price">£100.00</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="content">
-              <img src="../assets/img/01-300x300.jpg" alt="" />
-              <div class="product_info">
-                <div class="rating">3 su 5</div>
-                <div class="pro_name">Shopping Mahjong connect</div>
-                <div class="price">£100.00</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="content">
-              <img src="../assets/img/01-300x300.jpg" alt="" />
-              <div class="product_info">
-                <div class="rating">3 su 5</div>
-                <div class="pro_name">Shopping Mahjong connect</div>
-                <!-- <div class="price">£100.00</div> -->
-                <div class="buttons">
-                  <button><i class="fa-solid fa-bag-shopping"></i></button>
-                  <button><i class="fa-solid fa-heart"></i></button>
-                  <button><i class="fa-solid fa-maximize"></i></button>
-                  <button><i class="fa-solid fa-eye"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <div class="content">
-              <img src="../assets/img/01-300x300.jpg" alt="" />
-              <div class="product_info">
-                <div class="rating">3 su 5</div>
-                <div class="pro_name">Shopping Mahjong connect</div>
-                <div class="price">£100.00</div>
-              </div>
-            </div>
-          </div>
-          <i class="fa-regular fa-circle-right"></i>
-        </div>
+        <AppSlider :sliderData="this.cardsSlider" />
       </section>
     </div>
 
@@ -681,44 +610,6 @@ main {
       .content {
         padding: 0.9rem;
         text-align: center;
-      }
-    }
-  }
-  .fa-circle-left {
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    bottom: 40%;
-    font-size: 1.4em;
-    cursor: pointer;
-  }
-  .fa-circle-right {
-    display: inline-block;
-    position: absolute;
-    left: 78.4rem;
-    bottom: 40%;
-    font-size: 1.4em;
-    cursor: pointer;
-  }
-  .col-3 {
-    padding: 1rem;
-    .content {
-      background-color: brown;
-      img {
-        width: 100%;
-      }
-      .product_info {
-        background-color: #170e1f;
-        .buttons {
-          button {
-            background-color: #170e1f;
-            color: white;
-            width: calc(100% / 4);
-            border: 1px solid #242225;
-            font-size: 0.8em;
-            padding: 0.1rem 0;
-          }
-        }
       }
     }
   }
