@@ -24,6 +24,7 @@ export default {
   height: 100%;
   .content {
     position: relative;
+    cursor: pointer;
     img {
       height: 100%;
       width: 100%;
@@ -47,6 +48,9 @@ export default {
           cursor: pointer;
         }
       }
+    }
+    &:hover .card_info {
+      background-color: rgba(0, 0, 0, 1);
     }
   }
 }
