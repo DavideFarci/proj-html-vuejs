@@ -11,12 +11,8 @@ export default {
     <div class="content">
       <div class="img_container">
         <img :src="`src/assets/img/${dataBlog.image}`" :alt="dataBlog.image" />
-        <div class="more">
-          <i class="fa-solid fa-plus"></i>
-        </div>
-        <div class="share">
-          <i class="fa-solid fa-link"></i>
-        </div>
+        <i class="fa-solid fa-plus"></i>
+        <i class="fa-solid fa-link"></i>
       </div>
       <div class="info_blog">
         <div class="d-flex justify-content-between px-2">
@@ -44,64 +40,89 @@ export default {
 <style lang="scss" scoped>
 .col-4 {
   padding: 1rem;
-  .content {
-    .img_container {
-      position: relative;
-      img {
-        width: 100%;
-        z-index: 10;
-        &:hover {
-          z-index: 0;
-          opacity: 0.4;
-        }
-        &:hover .more,
-        .share {
-          visibility: visible;
-          z-index: 10;
-        }
-      }
-      .more {
-        visibility: hidden;
-        cursor: pointer;
-        position: absolute;
-        left: 38%;
-        bottom: 41%;
-        border: 1px solid white;
-        aspect-ratio: 1/1;
-        padding: 0.1rem;
-        height: 38px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .share {
-        visibility: hidden;
-        cursor: pointer;
-        position: absolute;
-        left: 51%;
-        bottom: 41%;
-        border: 1px solid white;
-        aspect-ratio: 1/1;
-        padding: 0.1rem;
-        height: 38px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+}
+.col-4 .content {
+  .img_container {
+    position: relative;
+    img {
+      width: 100%;
+      // z-index: 100;
+    }
+    // img:hover {
+    //   z-index: 0;
+    //   opacity: 0.4;
+    // }
+    // img:hover ~ .fa-link,
+    // img:hover ~ .fa-plus {
+    //   /* Proprietà CSS desiderate */
+    //   visibility: visible;
+    //   z-index: 1000;
+    // }
+
+    // img:hover + .fa-plus {
+    //   // z-index: 100;
+    //   // display: block;
+    //   visibility: visible;
+    //   z-index: 1000;
+    // }
+    // img:hover + .fa-link {
+    //   // z-index: 100;
+    //   // display: block;
+    //   visibility: visible;
+    //   z-index: 1000;
+    // }
+    .fa-plus {
+      // display: none;
+      visibility: hidden;
+      cursor: pointer;
+      position: absolute;
+      left: 38%;
+      bottom: 41%;
+      padding: 0.6rem 0.5rem 0.5rem 0.67rem;
+      border: 1px solid white;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      width: 38px;
+      // z-index: 0;
+      &:hover {
+        background-color: gray;
       }
     }
-    .info_blog {
-      background-color: #170e1f;
-      padding: 0.5rem;
-      span {
-        font-size: 0.9em;
-        font-weight: bold;
+    .fa-link {
+      // display: none;
+      visibility: hidden;
+      cursor: pointer;
+      position: absolute;
+      left: 51%;
+      bottom: 41%;
+      padding: 0.6rem 0.5rem 0.5rem 0.5rem;
+      border: 1px solid white;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      width: 38px;
+      // z-index: 0;
+      &:hover {
+        background-color: lightgray;
       }
-      i {
-        color: #f9aa01;
-        font-size: 0.9em;
-      }
+    }
+    &:hover img {
+      opacity: 0.4;
+    }
+    &:hover .fa-plus,
+    &:hover .fa-link {
+      visibility: visible;
+    }
+  }
+  .info_blog {
+    background-color: #170e1f;
+    padding: 0.5rem;
+    span {
+      font-size: 0.9em;
+      font-weight: bold;
+    }
+    i {
+      color: #f9aa01;
+      font-size: 0.9em;
     }
   }
 }
