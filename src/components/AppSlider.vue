@@ -112,8 +112,9 @@ export default {
       data-bs-target="#carouselExample"
       data-bs-slide="prev"
     >
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span> -->
+      <i class="fa-regular fa-circle-left"></i>
     </button>
     <button
       class="carousel-control-next z-1"
@@ -121,8 +122,9 @@ export default {
       data-bs-target="#carouselExample"
       data-bs-slide="next"
     >
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
+      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span> -->
+      <i class="fa-regular fa-circle-right"></i>
     </button>
   </div>
 </template>
@@ -131,22 +133,14 @@ export default {
 .row {
   justify-content: center;
 }
-// .fa-circle-left {
-//   display: inline-block;
-//   position: absolute;
-//   left: 0;
-//   bottom: 40%;
-//   font-size: 1.4em;
-//   cursor: pointer;
-// }
-// .fa-circle-right {
-//   display: inline-block;
-//   position: absolute;
-//   left: 78.4rem;
-//   bottom: 40%;
-//   font-size: 1.4em;
-//   cursor: pointer;
-// }
+.fa-circle-left {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.fa-circle-right {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
 .col-3 {
   padding: 1rem;
 
@@ -197,22 +191,11 @@ export default {
   right: -118px;
   top: 10rem;
   height: 50px;
-  // z-index: 10;
 }
 .carousel-control-prev {
   position: absolute;
   left: -112px;
   top: 10rem;
   height: 50px;
-  // z-index: 10;
 }
-// .carousel-control-prev-icon {
-//   position: absolute;
-//   left: -34px;
-// }
-
-// .carousel-control-next {
-//   position: absolute;
-//   right: -110px;
-// }
 </style>
