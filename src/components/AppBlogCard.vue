@@ -46,33 +46,8 @@ export default {
     position: relative;
     img {
       width: 100%;
-      // z-index: 100;
     }
-    // img:hover {
-    //   z-index: 0;
-    //   opacity: 0.4;
-    // }
-    // img:hover ~ .fa-link,
-    // img:hover ~ .fa-plus {
-    //   /* Proprietà CSS desiderate */
-    //   visibility: visible;
-    //   z-index: 1000;
-    // }
-
-    // img:hover + .fa-plus {
-    //   // z-index: 100;
-    //   // display: block;
-    //   visibility: visible;
-    //   z-index: 1000;
-    // }
-    // img:hover + .fa-link {
-    //   // z-index: 100;
-    //   // display: block;
-    //   visibility: visible;
-    //   z-index: 1000;
-    // }
     .fa-plus {
-      // display: none;
       visibility: hidden;
       cursor: pointer;
       position: absolute;
@@ -83,13 +58,11 @@ export default {
       border-radius: 50%;
       aspect-ratio: 1 / 1;
       width: 38px;
-      // z-index: 0;
       &:hover {
         background-color: gray;
       }
     }
     .fa-link {
-      // display: none;
       visibility: hidden;
       cursor: pointer;
       position: absolute;
@@ -100,7 +73,6 @@ export default {
       border-radius: 50%;
       aspect-ratio: 1 / 1;
       width: 38px;
-      // z-index: 0;
       &:hover {
         background-color: lightgray;
       }
