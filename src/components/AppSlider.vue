@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div id="carouselExample" class="carousel slide">
+  <div id="carouselExample" class="carousel slide z-3">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="row">
@@ -107,7 +107,7 @@ export default {
       </div>
     </div>
     <button
-      class="carousel-control-prev"
+      class="carousel-control-prev z-1"
       type="button"
       data-bs-target="#carouselExample"
       data-bs-slide="prev"
@@ -116,7 +116,7 @@ export default {
       <span class="visually-hidden">Previous</span>
     </button>
     <button
-      class="carousel-control-next"
+      class="carousel-control-next z-1"
       type="button"
       data-bs-target="#carouselExample"
       data-bs-slide="next"
@@ -192,13 +192,27 @@ export default {
 .carousel-inner {
   position: relative;
 }
-.carousel-control-prev-icon {
-  position: absolute;
-  left: -34px;
-}
-
 .carousel-control-next {
   position: absolute;
-  right: -110px;
+  right: -118px;
+  top: 10rem;
+  height: 50px;
+  // z-index: 10;
 }
+.carousel-control-prev {
+  position: absolute;
+  left: -112px;
+  top: 10rem;
+  height: 50px;
+  // z-index: 10;
+}
+// .carousel-control-prev-icon {
+//   position: absolute;
+//   left: -34px;
+// }
+
+// .carousel-control-next {
+//   position: absolute;
+//   right: -110px;
+// }
 </style>
