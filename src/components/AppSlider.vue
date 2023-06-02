@@ -21,17 +21,25 @@ export default {
             <div class="content">
               <img :src="`src/assets/img/${card.image}`" alt="" />
               <div class="product_info">
-                <i
-                  class="fa-regular fa-star"
-                  v-for="star in 5"
-                  :key="star"
-                  :class="{
-                    'fa-solid': star <= convertedVote,
-                    'fa-star': star > convertedVote,
-                  }"
-                ></i>
-                <div class="pro_name fw-bolder">{{ card.description }}</div>
-                <div class="price">{{ card.price }}</div>
+                <div class="info_padding">
+                  <i
+                    class="fa-regular fa-star"
+                    v-for="star in 5"
+                    :key="star"
+                    :class="{
+                      'fa-solid': star <= convertedVote,
+                      'fa-star': star > convertedVote,
+                    }"
+                  ></i>
+                  <div class="pro_name fw-bolder">{{ card.description }}</div>
+                  <div class="price">{{ card.price }}</div>
+                </div>
+                <div class="buttons">
+                  <button><i class="fa-solid fa-bag-shopping"></i></button>
+                  <button><i class="fa-solid fa-heart"></i></button>
+                  <button><i class="fa-solid fa-maximize"></i></button>
+                  <button><i class="fa-solid fa-eye"></i></button>
+                </div>
               </div>
             </div>
           </div>
@@ -43,17 +51,25 @@ export default {
             <div class="content">
               <img :src="`src/assets/img/${card.image}`" alt="" />
               <div class="product_info">
-                <i
-                  class="fa-regular fa-star"
-                  v-for="star in 5"
-                  :key="star"
-                  :class="{
-                    'fa-solid': star <= convertedVote,
-                    'fa-star': star > convertedVote,
-                  }"
-                ></i>
-                <div class="pro_name">{{ card.description }}</div>
-                <div class="price">{{ card.price }}</div>
+                <div class="info_padding">
+                  <i
+                    class="fa-regular fa-star"
+                    v-for="star in 5"
+                    :key="star"
+                    :class="{
+                      'fa-solid': star <= convertedVote,
+                      'fa-star': star > convertedVote,
+                    }"
+                  ></i>
+                  <div class="pro_name fw-bolder">{{ card.description }}</div>
+                  <div class="price">{{ card.price }}</div>
+                </div>
+                <div class="buttons">
+                  <button><i class="fa-solid fa-bag-shopping"></i></button>
+                  <button><i class="fa-solid fa-heart"></i></button>
+                  <button><i class="fa-solid fa-maximize"></i></button>
+                  <button><i class="fa-solid fa-eye"></i></button>
+                </div>
               </div>
             </div>
           </div>
@@ -65,17 +81,25 @@ export default {
             <div class="content">
               <img :src="`src/assets/img/${card.image}`" alt="" />
               <div class="product_info">
-                <i
-                  class="fa-regular fa-star"
-                  v-for="star in 5"
-                  :key="star"
-                  :class="{
-                    'fa-solid': star <= convertedVote,
-                    'fa-star': star > convertedVote,
-                  }"
-                ></i>
-                <div class="pro_name">{{ card.description }}</div>
-                <div class="price">{{ card.price }}</div>
+                <div class="info_padding">
+                  <i
+                    class="fa-regular fa-star"
+                    v-for="star in 5"
+                    :key="star"
+                    :class="{
+                      'fa-solid': star <= convertedVote,
+                      'fa-star': star > convertedVote,
+                    }"
+                  ></i>
+                  <div class="pro_name fw-bolder">{{ card.description }}</div>
+                  <div class="price">{{ card.price }}</div>
+                </div>
+                <div class="buttons">
+                  <button><i class="fa-solid fa-bag-shopping"></i></button>
+                  <button><i class="fa-solid fa-heart"></i></button>
+                  <button><i class="fa-solid fa-maximize"></i></button>
+                  <button><i class="fa-solid fa-eye"></i></button>
+                </div>
               </div>
             </div>
           </div>
@@ -127,40 +151,39 @@ export default {
   padding: 1rem;
 
   .content {
-    background-color: brown;
     cursor: pointer;
     img {
       width: 100%;
     }
     .product_info {
-      background-color: #170e1f;
-      padding: 0.5rem;
-      i {
+      .info_padding {
+        background-color: #170e1f;
+        padding: 0.5rem 0.5rem 0;
+      }
+      .fa-star {
         color: #f9aa01;
       }
       .price {
         font-size: 0.9em;
         color: #f9aa01;
       }
-      .price:hover {
-        display: none;
-        z-index: 0;
-      }
       .buttons {
         color: #f9aa01;
         button {
           display: none;
           background-color: #170e1f;
-          color: white;
+          color: white !important;
           width: calc(100% / 4);
           border: 1px solid #242225;
           font-size: 0.8em;
           padding: 0.1rem 0;
-          &:hover {
-            display: block;
-            z-index: 10;
-          }
         }
+      }
+      &:hover .price {
+        display: none;
+      }
+      &:hover .buttons button {
+        display: inline-block;
       }
     }
   }
