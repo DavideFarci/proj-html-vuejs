@@ -3,10 +3,17 @@ export default {
   props: {
     sliderData: Array,
   },
+  // computed: {
+  //   convertedVote() {
+  //     // NON FUNZIONA
+  //     return Math.ceil((card.rate / 10) * 5);
+  //   },
+  // },
   computed: {
     convertedVote() {
-      // NON FUNZIONA
-      return Math.ceil((this.sliderData.rate / 10) * 5);
+      return this.sliderData.map((card) => {
+        return Math.ceil((card.rate / 10) * 5);
+      });
     },
   },
 };
@@ -27,8 +34,8 @@ export default {
                     v-for="star in 5"
                     :key="star"
                     :class="{
-                      'fa-solid': star <= convertedVote,
-                      'fa-star': star > convertedVote,
+                      'fa-solid': star <= convertedVote[i],
+                      'fa-star': star > convertedVote[i],
                     }"
                   ></i>
                   <div class="pro_name fw-bolder">{{ card.description }}</div>
@@ -106,6 +113,7 @@ export default {
         </div>
       </div>
     </div>
+    <!-- controllo scorrimento SX -->
     <button
       class="carousel-control-prev z-1"
       type="button"
@@ -116,6 +124,7 @@ export default {
       <span class="visually-hidden">Previous</span> -->
       <i class="fa-regular fa-circle-left"></i>
     </button>
+    <!-- controllo scorrimento DX -->
     <button
       class="carousel-control-next z-1"
       type="button"
