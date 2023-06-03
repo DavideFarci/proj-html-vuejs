@@ -1,6 +1,7 @@
 <script>
 import AppBlogCard from "./AppBlogCard.vue";
 import AppCard from "./AppCard.vue";
+import AppDevelopers from "./AppDevelopers.vue";
 import AppSlider from "./AppSlider.vue";
 
 export default {
@@ -230,7 +231,15 @@ export default {
       ],
     };
   },
-  components: { AppCard, AppBlogCard, AppSlider },
+  computed: {
+    partnersWithIndex() {
+      return this.partners.map((partner, index) => ({
+        ...partner,
+        index,
+      }));
+    },
+  },
+  components: { AppCard, AppBlogCard, AppSlider, AppDevelopers },
 };
 </script>
 
@@ -403,90 +412,7 @@ export default {
 
     <!-- sezone a tutto schermo -->
     <section class="full_background">
-      <div class="col-7">
-        <div class="content">
-          <div
-            id="carouselExampleAutoplaying"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-                <img :src="`src/assets/img/${this.partners[0].image}`" alt="" />
-                <div>
-                  {{ this.partners[0].name }}
-                  <span>{{ this.partners[0].role }}</span>
-                </div>
-                <div>
-                  {{ this.partners[0].description }}
-                </div>
-                <div>
-                  <i style="color: #f9aa01" class="fa-solid fa-circle"></i>
-                  <i class="fa-solid fa-circle"></i>
-                  <i class="fa-solid fa-circle"></i>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-                <img :src="`src/assets/img/${this.partners[1].image}`" alt="" />
-                <div>
-                  {{ this.partners[1].name
-                  }}<span> {{ this.partners[1].role }}</span>
-                </div>
-                <div>
-                  {{ this.partners[1].description }}
-                </div>
-                <div>
-                  <i class="fa-solid fa-circle"></i>
-                  <i style="color: #f9aa01" class="fa-solid fa-circle"></i>
-                  <i class="fa-solid fa-circle"></i>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-                <img :src="`src/assets/img/${this.partners[2].image}`" alt="" />
-                <div>
-                  {{ this.partners[2].name }}
-                  <span>{{ this.partners[2].role }}</span>
-                </div>
-                <div>
-                  {{ this.partners[2].description }}
-                </div>
-                <div>
-                  <i class="fa-solid fa-circle"></i>
-                  <i class="fa-solid fa-circle"></i>
-                  <i style="color: #f9aa01" class="fa-solid fa-circle"></i>
-                </div>
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
+      <AppDevelopers :devData="partnersWithIndex" />
     </section>
 
     <div class="container">
@@ -805,37 +731,6 @@ main {
   justify-content: center;
   align-items: center;
   margin-top: 3rem;
-  .col-7 {
-    height: 20rem;
-    text-align: center;
-    padding: 1rem;
-    .content {
-      position: relative;
-      .carousel-item span {
-        color: #f9aa01;
-      }
-      .carousel-item > :nth-child(n + 2) {
-        margin-bottom: 1rem;
-      }
-
-      .fa-quote-left {
-        padding: 0.3rem;
-        background-color: #f9aa01;
-        border-radius: 50%;
-        position: absolute;
-        left: 32.5rem;
-        top: 1.3rem;
-      }
-      img {
-        border-radius: 50%;
-        border: 4px solid #f9aa01;
-      }
-      .fa-circle {
-        font-size: 0.9em;
-        margin-right: 0.5rem;
-      }
-    }
-  }
 }
 
 .new_game_blogs {
