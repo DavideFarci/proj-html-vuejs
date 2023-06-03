@@ -1,6 +1,7 @@
 <script>
 import AppBlogCard from "./AppBlogCard.vue";
 import AppCard from "./AppCard.vue";
+import AppCardDouble from "./AppCardDouble.vue";
 import AppDevelopers from "./AppDevelopers.vue";
 import AppSlider from "./AppSlider.vue";
 
@@ -229,10 +230,36 @@ export default {
             Saepe, laboriosam! Provident, repellendus!`,
         },
       ],
+      bigCards: [
+        {
+          image: "cms-banner-01.jpg",
+          title: "Most Popular",
+          descriptionUp: "The Battelfield 4",
+          descriptionDown: "Naval Strike",
+        },
+        {
+          image: "cms-banner-02.jpg",
+          title: "Latest Game",
+          descriptionUp: `Assasin's Creed`,
+          descriptionDown: "Unity Game",
+        },
+        {
+          image: "cms-banner-03.jpg",
+          title: "20% Discount",
+          descriptionUp: `TDragon's Dogma`,
+          descriptionDown: "Video Game",
+        },
+        {
+          image: "cms-banner-04.jpg",
+          title: "30% Discount",
+          descriptionUp: "World of Tank",
+          descriptionDown: "New Game",
+        },
+      ],
     };
   },
 
-  components: { AppCard, AppBlogCard, AppSlider, AppDevelopers },
+  components: { AppCard, AppBlogCard, AppSlider, AppDevelopers, AppCardDouble },
 };
 </script>
 
@@ -308,7 +335,8 @@ export default {
 
       <!-- section con 2 col-6 (si ripete) -->
       <section class="double">
-        <div class="row">
+        <AppCardDouble :dataCard="bigCards" />
+        <!-- <div class="row">
           <div class="col-6">
             <div class="content">
               <img src="../assets/img/cms-banner-01.jpg" alt="" />
@@ -333,7 +361,7 @@ export default {
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
 
       <!-- sezione con card -->
