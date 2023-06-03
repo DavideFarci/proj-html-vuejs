@@ -1,7 +1,8 @@
 <script>
 export default {
   props: {
-    sliderData: Array,
+    productsData: Array,
+    productsNextData: Array,
   },
   // computed: {
   //   convertedVote() {
@@ -9,9 +10,17 @@ export default {
   //     return Math.ceil((card.rate / 10) * 5);
   //   },
   // },
+  // computed: {
+  //   convertedVote() {
+  //     return this.sliderData.map((card) => {
+  //       return Math.ceil((card.rate / 10) * 5);
+  //     });
+  //   },
+  // },
   computed: {
     convertedVote() {
-      return this.sliderData.map((card) => {
+      const allCards = [...this.productsData, ...this.productsNextData];
+      return allCards.map((card) => {
         return Math.ceil((card.rate / 10) * 5);
       });
     },
@@ -24,7 +33,7 @@ export default {
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="row">
-          <div class="col-3" v-for="(card, i) in sliderData" :key="i">
+          <div class="col-3" v-for="(card, i) in productsData" :key="i">
             <div class="content">
               <img :src="`src/assets/img/${card.image}`" alt="" />
               <div class="product_info">
@@ -54,9 +63,13 @@ export default {
       </div>
       <div class="carousel-item">
         <div class="row">
-          <div class="col-3" v-for="(card, i) in sliderData" :key="i">
+          <div
+            class="col-3"
+            v-for="(secondCard, i) in productsNextData"
+            :key="i"
+          >
             <div class="content">
-              <img :src="`src/assets/img/${card.image}`" alt="" />
+              <img :src="`src/assets/img/${secondCard.image}`" alt="" />
               <div class="product_info">
                 <div class="info_padding">
                   <i
@@ -64,42 +77,14 @@ export default {
                     v-for="star in 5"
                     :key="star"
                     :class="{
-                      'fa-solid': star <= convertedVote,
-                      'fa-star': star > convertedVote,
+                      'fa-solid': star <= convertedVote[i],
+                      'fa-star': star > convertedVote[i],
                     }"
                   ></i>
-                  <div class="pro_name fw-bolder">{{ card.description }}</div>
-                  <div class="price">{{ card.price }}</div>
-                </div>
-                <div class="buttons">
-                  <button><i class="fa-solid fa-bag-shopping"></i></button>
-                  <button><i class="fa-solid fa-heart"></i></button>
-                  <button><i class="fa-solid fa-maximize"></i></button>
-                  <button><i class="fa-solid fa-eye"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-3" v-for="(card, i) in sliderData" :key="i">
-            <div class="content">
-              <img :src="`src/assets/img/${card.image}`" alt="" />
-              <div class="product_info">
-                <div class="info_padding">
-                  <i
-                    class="fa-regular fa-star"
-                    v-for="star in 5"
-                    :key="star"
-                    :class="{
-                      'fa-solid': star <= convertedVote,
-                      'fa-star': star > convertedVote,
-                    }"
-                  ></i>
-                  <div class="pro_name fw-bolder">{{ card.description }}</div>
-                  <div class="price">{{ card.price }}</div>
+                  <div class="pro_name fw-bolder">
+                    {{ secondCard.description }}
+                  </div>
+                  <div class="price">{{ secondCard.price }}</div>
                 </div>
                 <div class="buttons">
                   <button><i class="fa-solid fa-bag-shopping"></i></button>

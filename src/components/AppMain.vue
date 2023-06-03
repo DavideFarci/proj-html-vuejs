@@ -117,28 +117,86 @@ export default {
       ],
       cardsSlider: [
         {
-          image: "01-300x300.jpg",
-          rate: 3,
-          description: "Shopping Mahjong connect",
-          price: "£100.00",
+          ourProducts: [
+            {
+              image: "01-300x300.jpg",
+              rate: 3,
+              description: "Shopping Mahjong connect",
+              price: "£100.00",
+            },
+            {
+              image: "04-300x300.jpg",
+              rate: 4,
+              description: "Shopping Mahjong connect",
+              price: "£100.00",
+            },
+            {
+              image: "09-300x300.jpg",
+              rate: 0,
+              description: "Buddy and Lucky Solitair",
+              price: "$83.90 - £90.00",
+            },
+            {
+              image: "11-300x300.jpg",
+              rate: 2,
+              description: "Labirinths of the Worlf",
+              price: "$110.00",
+            },
+          ],
+          ourProductsNext: [
+            {
+              image: "12-300x300.jpg",
+              rate: 4,
+              description: "Shopping Mahjong connect",
+              price: "£200.00",
+            },
+            {
+              image: "08-300x300.jpg",
+              rate: 1,
+              description: "Shopping Mahjong connect",
+              price: "£50.00",
+            },
+            {
+              image: "05-300x300.jpg",
+              rate: 5,
+              description: "Buddy and Lucky Solitair",
+              price: "$200.00 - £400.00",
+            },
+            {
+              image: "15-300x300.jpg",
+              rate: 2,
+              description: "Labirinths of the Worlf",
+              price: "$110.00",
+            },
+          ],
         },
         {
-          image: "04-300x300.jpg",
-          rate: 4,
-          description: "Shopping Mahjong connect",
-          price: "£100.00",
-        },
-        {
-          image: "09-300x300.jpg",
-          rate: 0,
-          description: "Buddy and Lucky Solitair",
-          price: "$83.90 - £90.00",
-        },
-        {
-          image: "11-300x300.jpg",
-          rate: 2,
-          description: "Labirinths of the Worlf",
-          price: "$110.00",
+          dealProducts: [
+            {
+              image: "04-300x300.jpg",
+              rate: 1,
+              description: "Shopping Mahjong connect",
+              price: "£150.00",
+            },
+            {
+              image: "18-300x300.jpg",
+              rate: 3,
+              description: "Shopping Mahjong connect",
+              price: "£90.00",
+            },
+            {
+              image: "02-300x300.jpg",
+              rate: 0,
+              description: "Buddy and Lucky Solitair",
+              price: "$83.90 - £90.00",
+            },
+            {
+              image: "10-300x300.jpg",
+              rate: 5,
+              description: "Labirinths of the Worlf",
+              price: "$190.00",
+            },
+          ],
         },
       ],
       partners: [
@@ -294,7 +352,10 @@ export default {
           <div class="col-2"><div class="content">New Arrival</div></div>
           <div class="col-2"><div class="content">Best Sellers</div></div>
         </div>
-        <AppSlider :sliderData="this.cardsSlider" />
+        <AppSlider
+          :productsData="this.cardsSlider.ourProducts"
+          :productsNextData="this.cardsSlider.ourProductsNext"
+        />
       </section>
 
       <!-- altra sezione col-6 -->
@@ -336,7 +397,7 @@ export default {
           <div class="col-2"><div class="content">24 Min</div></div>
           <div class="col-2"><div class="content">17 Sec</div></div>
         </div>
-        <AppSlider :sliderData="this.cardsSlider" />
+        <!-- <AppSlider :dealData="this.cardsSlider.dealProducts" /> -->
       </section>
     </div>
 
