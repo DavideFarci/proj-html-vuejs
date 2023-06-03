@@ -231,14 +231,7 @@ export default {
       ],
     };
   },
-  computed: {
-    partnersWithIndex() {
-      return this.partners.map((partner, index) => ({
-        ...partner,
-        index,
-      }));
-    },
-  },
+
   components: { AppCard, AppBlogCard, AppSlider, AppDevelopers },
 };
 </script>
@@ -412,7 +405,11 @@ export default {
 
     <!-- sezone a tutto schermo -->
     <section class="full_background">
-      <AppDevelopers :devData="partnersWithIndex" />
+      <AppDevelopers
+        :devDataOne="partners[0]"
+        :devDataTwo="partners[1]"
+        :devDataThree="partners[2]"
+      />
     </section>
 
     <div class="container">

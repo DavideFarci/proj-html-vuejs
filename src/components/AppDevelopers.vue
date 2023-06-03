@@ -1,10 +1,7 @@
 <script>
 export default {
   props: {
-    devData: {
-      type: Array,
-      required: true,
-    },
+    devData: Array,
   },
 };
 </script>
@@ -13,7 +10,7 @@ export default {
   <div class="col-7">
     <div class="content">
       <div
-        v-if="partners && partners.length > 0"
+        v-if="devData && devData.length > 0"
         id="carouselExampleAutoplaying"
         class="carousel slide"
         data-bs-ride="carousel"
@@ -21,13 +18,13 @@ export default {
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-            <img :src="`src/assets/img/${partners[0].image}`" alt="" />
+            <img :src="`src/assets/img/${devData[0].image}`" alt="" />
             <div>
-              {{ partners[0].name }}
-              <span>{{ partners[0].role }}</span>
+              {{ devData[0].name }}
+              <span>{{ devData[0].role }}</span>
             </div>
             <div>
-              {{ partners[0].description }}
+              {{ devData[0].description }}
             </div>
             <div>
               <i style="color: #f9aa01" class="fa-solid fa-circle"></i>
@@ -37,12 +34,12 @@ export default {
           </div>
           <div class="carousel-item">
             <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-            <img :src="`src/assets/img/${partners[1].image}`" alt="" />
+            <img :src="`src/assets/img/${devData[1].image}`" alt="" />
             <div>
-              {{ partners[1].name }}<span> {{ partners[1].role }}</span>
+              {{ devData[1].name }}<span> {{ devData[1].role }}</span>
             </div>
             <div>
-              {{ partners[1].description }}
+              {{ devData[1].description }}
             </div>
             <div>
               <i class="fa-solid fa-circle"></i>
@@ -52,13 +49,13 @@ export default {
           </div>
           <div class="carousel-item">
             <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-            <img :src="`src/assets/img/${partners[2].image}`" alt="" />
+            <img :src="`src/assets/img/${devData[2].image}`" alt="" />
             <div>
-              {{ partners[2].name }}
-              <span>{{ partners[2].role }}</span>
+              {{ devData[2].name }}
+              <span>{{ devData[2].role }}</span>
             </div>
             <div>
-              {{ partners[2].description }}
+              {{ devData[2].description }}
             </div>
             <div>
               <i class="fa-solid fa-circle"></i>
