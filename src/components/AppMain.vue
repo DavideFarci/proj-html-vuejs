@@ -609,49 +609,6 @@ main {
 
 .double {
   margin-top: 3rem;
-  .col-6 {
-    padding: 1rem;
-    // height: 100%;
-    .content {
-      background-color: brown;
-      position: relative;
-      img {
-        width: 100%;
-      }
-      //   height: 15rem;
-    }
-  }
-  .yellow_strip {
-    background-color: #f9aa01;
-    width: 10rem;
-    height: 1.5rem;
-    transform: skew(-20deg);
-    transform-origin: top right;
-    overflow: hidden;
-    position: absolute;
-    right: 8rem;
-    top: 6rem;
-    text-align: center;
-    .strip_content {
-      font-size: 1.6em;
-      color: #242225;
-      text-align: center;
-      font-weight: bolder;
-      position: relative;
-      bottom: 6px;
-    }
-  }
-  .title_content {
-    font-size: 1.6em;
-    font-weight: bolder;
-    color: white;
-    position: absolute;
-    top: 8rem;
-    right: 6rem;
-    & > * {
-      letter-spacing: 2px;
-    }
-  }
 }
 
 .special_category {
