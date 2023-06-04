@@ -3,17 +3,12 @@ export default {
   props: {
     dataCard: Array,
   },
-  methods: {
-    getLimitedArray(dataCard) {
-      return dataCard.slice(0, 2);
-    },
-  },
 };
 </script>
 
 <template>
   <div class="row">
-    <div class="col-6" v-for="(card, i) in getLimitedArray(dataCard)" :key="i">
+    <div class="col-6" v-for="(card, i) in dataCard" :key="i">
       <div class="content">
         <img :src="`src/assets/img/${card.image}`" :alt="card.image" />
         <div class="yellow_strip">
@@ -25,18 +20,6 @@ export default {
         </div>
       </div>
     </div>
-    <!-- <div class="col-6">
-      <div class="content">
-        <img src="../assets/img/cms-banner-02.jpg" alt="" />
-        <div class="yellow_strip">
-          <span class="strip_content">Latest Game</span>
-        </div>
-        <div class="title_content">
-          <div>Assasin's Creed</div>
-          <div>Unity Game</div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 

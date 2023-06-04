@@ -258,7 +258,11 @@ export default {
       ],
     };
   },
-
+  methods: {
+    getLimitedArray(bigCards, start, end) {
+      return bigCards.slice(start, end);
+    },
+  },
   components: { AppCard, AppBlogCard, AppSlider, AppDevelopers, AppCardDouble },
 };
 </script>
@@ -335,33 +339,7 @@ export default {
 
       <!-- section con 2 col-6 (si ripete) -->
       <section class="double">
-        <AppCardDouble :dataCard="bigCards" />
-        <!-- <div class="row">
-          <div class="col-6">
-            <div class="content">
-              <img src="../assets/img/cms-banner-01.jpg" alt="" />
-              <div class="yellow_strip">
-                <span class="strip_content">Most Popular</span>
-              </div>
-              <div class="title_content">
-                <div>The Battelfield 4</div>
-                <div>Naval Strike</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="content">
-              <img src="../assets/img/cms-banner-02.jpg" alt="" />
-              <div class="yellow_strip">
-                <span class="strip_content">Latest Game</span>
-              </div>
-              <div class="title_content">
-                <div>Assasin's Creed</div>
-                <div>Unity Game</div>
-              </div>
-            </div>
-          </div>
-        </div> -->
+        <AppCardDouble :dataCard="this.getLimitedArray(bigCards, 0, 2)" />
       </section>
 
       <!-- sezione con card -->
@@ -389,32 +367,7 @@ export default {
 
       <!-- altra sezione col-6 -->
       <section class="double">
-        <div class="row">
-          <div class="col-6">
-            <div class="content">
-              <img src="../assets/img/cms-banner-03.jpg" alt="banner-03" />
-              <div class="yellow_strip">
-                <span class="strip_content">20% Discount</span>
-              </div>
-              <div class="title_content">
-                <div>TDragon's Dogma</div>
-                <div>Video Game</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="content">
-              <img src="../assets/img/cms-banner-04.jpg" alt="banner-04" />
-              <div class="yellow_strip">
-                <span class="strip_content">30% Discount</span>
-              </div>
-              <div class="title_content">
-                <div>World of Tank</div>
-                <div>New Game</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <AppCardDouble :dataCard="this.getLimitedArray(bigCards, 2, 4)" />
       </section>
 
       <!-- secondo carosello -->
