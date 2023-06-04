@@ -8,7 +8,7 @@ export default {
 
 <template>
   <nav>
-    <ul class="d-flex">
+    <ul class="d-flex gap-3">
       <li v-for="item in dataNav" :key="item.id">
         <div class="dropdown">
           <a
@@ -22,9 +22,9 @@ export default {
           </a>
 
           <ul class="dropdown-menu bg-dark">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Left Sidebar</a></li>
+            <li><a class="dropdown-item" href="#">Right Sidebar</a></li>
+            <li><a class="dropdown-item" href="#">Full Width</a></li>
           </ul>
         </div>
       </li>
