@@ -382,10 +382,9 @@ export default {
           <div class="col-2"><div class="content">New Arrival</div></div>
           <div class="col-2"><div class="content">Best Sellers</div></div>
         </div>
-        <AppSlider
-          :productsData="this.cardsSlider.ourProducts"
-          :productsNextData="this.cardsSlider.ourProductsNext"
-        />
+        <div class="row">
+          <AppSlider :productsData="this.cardsSlider" />
+        </div>
       </section>
 
       <!-- altra sezione col-6 -->
@@ -785,3 +784,6 @@ main {
   }
 }
 </style>
+
+<!-- TODO: 
+- Sistemare sezione double -->
