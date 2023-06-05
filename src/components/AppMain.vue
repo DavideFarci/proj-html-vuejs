@@ -698,6 +698,3 @@ main {
   }
 }
 </style>
-
-<!-- TODO: 
-- Sistemare sezione double -->
