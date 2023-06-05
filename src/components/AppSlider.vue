@@ -11,22 +11,23 @@ export default {
   // },
   // computed: {
   //   convertedVote() {
-  //     return this.sliderData.map((card) => {
+  //     return this.cardSlider.map((card) => {
   //       return Math.ceil((card.rate / 10) * 5);
   //     });
   //   },
   // },
-  computed: {
-    convertedVote() {
-      const allCards = [
-        ...this.productsData.ourProducts,
-        ...this.productsData.ourProductsNext,
-      ];
-      return allCards.map((card) => {
-        return Math.ceil((card.rate / 10) * 5);
-      });
-    },
-  },
+  // computed: {
+  //   convertedVoteOurProducts() {
+  //     return this.productsData[0].ourProductsNext.map((card) => {
+  //       return Math.ceil((card.rate / 10) * 5);
+  //     });
+  //   },
+  //   convertedVoteOurProductsNext() {
+  //     return this.productsData[0].ourProductsNext.map((card) => {
+  //       return Math.ceil((card.rate / 10) * 5);
+  //     });
+  //   },
+  // },
 };
 </script>
 
@@ -35,76 +36,72 @@ export default {
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="row">
-          <template>
-            <div
-              class="col-3"
-              v-for="(card, i) in productsData.ourProducts"
-              :key="i"
-            >
-              <div class="content">
-                <img :src="`src/assets/img/${card.image}`" alt="" />
-                <div class="product_info">
-                  <div class="info_padding">
-                    <i
-                      class="fa-regular fa-star"
-                      v-for="star in 5"
-                      :key="star"
-                      :class="{
-                        'fa-solid': star <= convertedVote[i],
-                        'fa-star': star > convertedVote[i],
-                      }"
-                    ></i>
-                    <div class="pro_name fw-bolder">{{ card.description }}</div>
-                    <div class="price">{{ card.price }}</div>
-                  </div>
-                  <div class="buttons">
-                    <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    <button><i class="fa-solid fa-heart"></i></button>
-                    <button><i class="fa-solid fa-maximize"></i></button>
-                    <button><i class="fa-solid fa-eye"></i></button>
-                  </div>
+          <div
+            class="col-3"
+            v-for="(card, i) in productsData[0].ourProducts"
+            :key="i"
+          >
+            <div class="content">
+              <img :src="`src/assets/img/${card.image}`" alt="" />
+              <div class="product_info">
+                <div class="info_padding">
+                  <i
+                    class="fa-regular fa-star"
+                    v-for="star in 5"
+                    :key="star"
+                    :class="{
+                      'fa-solid': star <= card.rate,
+                      'fa-star': star > card.rate,
+                    }"
+                  ></i>
+                  <div class="pro_name fw-bolder">{{ card.description }}</div>
+                  <div class="price">{{ card.price }}</div>
+                </div>
+                <div class="buttons">
+                  <button><i class="fa-solid fa-bag-shopping"></i></button>
+                  <button><i class="fa-solid fa-heart"></i></button>
+                  <button><i class="fa-solid fa-maximize"></i></button>
+                  <button><i class="fa-solid fa-eye"></i></button>
                 </div>
               </div>
             </div>
-          </template>
+          </div>
         </div>
       </div>
       <div class="carousel-item">
         <div class="row">
-          <template>
-            <div
-              class="col-3"
-              v-for="(secondCard, i) in productsData.ourProductsNext"
-              :key="i"
-            >
-              <div class="content">
-                <img :src="`src/assets/img/${secondCard.image}`" alt="" />
-                <div class="product_info">
-                  <div class="info_padding">
-                    <i
-                      class="fa-regular fa-star"
-                      v-for="star in 5"
-                      :key="star"
-                      :class="{
-                        'fa-solid': star <= convertedVote[i],
-                        'fa-star': star > convertedVote[i],
-                      }"
-                    ></i>
-                    <div class="pro_name fw-bolder">
-                      {{ secondCard.description }}
-                    </div>
-                    <div class="price">{{ secondCard.price }}</div>
+          <div
+            class="col-3"
+            v-for="(secondCard, i) in productsData[0].ourProductsNext"
+            :key="i"
+          >
+            <div class="content">
+              <img :src="`src/assets/img/${secondCard.image}`" alt="" />
+              <div class="product_info">
+                <div class="info_padding">
+                  <i
+                    class="fa-regular fa-star"
+                    v-for="star in 5"
+                    :key="star"
+                    :class="{
+                      'fa-solid': star <= secondCard.rate,
+                      'fa-star': star > secondCard.rate,
+                    }"
+                  ></i>
+                  <div class="pro_name fw-bolder">
+                    {{ secondCard.description }}
                   </div>
-                  <div class="buttons">
-                    <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    <button><i class="fa-solid fa-heart"></i></button>
-                    <button><i class="fa-solid fa-maximize"></i></button>
-                    <button><i class="fa-solid fa-eye"></i></button>
-                  </div>
+                  <div class="price">{{ secondCard.price }}</div>
+                </div>
+                <div class="buttons">
+                  <button><i class="fa-solid fa-bag-shopping"></i></button>
+                  <button><i class="fa-solid fa-heart"></i></button>
+                  <button><i class="fa-solid fa-maximize"></i></button>
+                  <button><i class="fa-solid fa-eye"></i></button>
                 </div>
               </div>
             </div>
-          </template>
+          </div>
         </div>
       </div>
     </div>

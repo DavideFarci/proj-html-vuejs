@@ -117,7 +117,7 @@ export default {
           ],
         },
       ],
-      cardsSlider: [
+      cardSlider: [
         {
           ourProducts: [
             {
@@ -361,7 +361,7 @@ export default {
           <div class="col-2"><div class="content">Best Sellers</div></div>
         </div>
         <div class="row">
-          <AppSlider :productsData="this.cardsSlider" />
+          <AppSlider :productsData="cardSlider" />
         </div>
       </section>
 
@@ -379,7 +379,7 @@ export default {
           <div class="col-2"><div class="content">24 Min</div></div>
           <div class="col-2"><div class="content">17 Sec</div></div>
         </div>
-        <!-- <AppSlider :dealData="this.cardsSlider.dealProducts" /> -->
+        <!-- <AppSlider :dealData="this.cardSlider.dealProducts" /> -->
       </section>
     </div>
 
