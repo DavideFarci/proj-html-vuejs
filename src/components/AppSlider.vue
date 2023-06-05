@@ -3,31 +3,6 @@ export default {
   props: {
     productsData: Array,
   },
-  // computed: {
-  //   convertedVote() {
-  //     // NON FUNZIONA
-  //     return Math.ceil((card.rate / 10) * 5);
-  //   },
-  // },
-  // computed: {
-  //   convertedVote() {
-  //     return this.cardSlider.map((card) => {
-  //       return Math.ceil((card.rate / 10) * 5);
-  //     });
-  //   },
-  // },
-  // computed: {
-  //   convertedVoteOurProducts() {
-  //     return this.productsData[0].ourProductsNext.map((card) => {
-  //       return Math.ceil((card.rate / 10) * 5);
-  //     });
-  //   },
-  //   convertedVoteOurProductsNext() {
-  //     return this.productsData[0].ourProductsNext.map((card) => {
-  //       return Math.ceil((card.rate / 10) * 5);
-  //     });
-  //   },
-  // },
 };
 </script>
 
