@@ -69,8 +69,8 @@ export default {
 
 <template>
   <footer>
-    <div class="container">
-      <div class="footer_up">
+    <div class="footer_up">
+      <div class="container">
         <div class="row">
           <div class="col-2">
             <div class="content">
@@ -146,7 +146,9 @@ export default {
           </div>
         </div>
       </div>
-      <div class="footer_down">
+    </div>
+    <div class="footer_down">
+      <div class="container">
         <div class="row">
           <div class="col-3">
             <div class="content">
@@ -175,6 +177,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  margin: 0 0.5rem;
   .footer_up {
     padding: 1rem 0;
     .col-2 {
@@ -269,6 +272,7 @@ footer {
   .footer_down {
     padding: 0.5rem 0 0;
     margin-top: 2.5rem;
+    border-top: 1px solid rgb(80, 80, 80);
     .row {
       justify-content: space-between;
       .col-3 {
