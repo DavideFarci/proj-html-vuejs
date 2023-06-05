@@ -4,6 +4,7 @@ import AppCard from "./AppCard.vue";
 import AppCardDouble from "./AppCardDouble.vue";
 import AppDevelopers from "./AppDevelopers.vue";
 import AppSlider from "./AppSlider.vue";
+import AppSliderDeal from "./AppSliderDeal.vue";
 
 export default {
   data() {
@@ -263,7 +264,14 @@ export default {
       return bigCards.slice(start, end);
     },
   },
-  components: { AppCard, AppBlogCard, AppSlider, AppDevelopers, AppCardDouble },
+  components: {
+    AppCard,
+    AppBlogCard,
+    AppSlider,
+    AppDevelopers,
+    AppCardDouble,
+    AppSliderDeal,
+  },
 };
 </script>
 
@@ -379,7 +387,7 @@ export default {
           <div class="col-2"><div class="content">24 Min</div></div>
           <div class="col-2"><div class="content">17 Sec</div></div>
         </div>
-        <!-- <AppSlider :dealData="this.cardSlider.dealProducts" /> -->
+        <AppSliderDeal :productsData="cardSlider" />
       </section>
     </div>
 
