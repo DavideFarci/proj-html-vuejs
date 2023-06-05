@@ -81,8 +81,8 @@ export default {
           <span class="strip_content">Upcoming Stock</span>
         </div>
         <div class="title_content">
-          <div>Far Cry 4</div>
-          <div>Video Game</div>
+          <div>Resident Evil 3</div>
+          <div>Remake</div>
         </div>
         <button>Shop Now</button>
       </div>
@@ -221,9 +221,10 @@ header {
   .jumbotron {
     height: 37.125rem;
     // background-color: brown;
-    background-image: url(../assets/img/Far-Cry-4-hidden-ending-Copia.jpg);
+    background-image: url(../assets/img/jumbotron.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: -44px;
     display: flex;
     align-items: center;
     .over_text {
