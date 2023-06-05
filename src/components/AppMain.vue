@@ -11,13 +11,13 @@ export default {
       cards: [
         {
           id: 1,
-          image: "category-image-01-446x550_t.jpg",
+          image: "category-image-02-446x550_t.jpg",
           name: "Batman",
           shop: "Shop Now",
         },
         {
           id: 2,
-          image: "category-image-02-446x550_t.jpg",
+          image: "category-image-01-446x550_t.jpg",
           name: "Bayonetta",
           shop: "Shop Now",
         },
