@@ -27,6 +27,7 @@ export default {
 .col-6 {
   padding: 1rem;
   .content {
+    cursor: pointer;
     background-color: brown;
     position: relative;
     img {

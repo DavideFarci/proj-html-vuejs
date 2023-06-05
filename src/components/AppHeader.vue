@@ -71,7 +71,7 @@ export default {
             <div class="regular"></div>
             <div class="hover"></div>
           </div>
-          <span class="cart_price">(0)£0.00</span>
+          <span class="cart_price">(0) £0.00</span>
         </div>
       </div>
     </div>
