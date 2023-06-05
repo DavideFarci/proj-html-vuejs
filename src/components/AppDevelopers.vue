@@ -10,15 +10,16 @@ export default {
   <div class="col-7">
     <div class="content">
       <div
-        v-if="devData && devData.length > 0"
         id="carouselExampleAutoplaying"
         class="carousel slide"
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-            <img :src="`src/assets/img/${devData[0].image}`" alt="" />
+            <div class="img-container">
+              <img :src="`src/assets/img/${devData[0].image}`" alt="" />
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
             <div>
               {{ devData[0].name }}
               <span>{{ devData[0].role }}</span>
@@ -32,9 +33,12 @@ export default {
               <i class="fa-solid fa-circle"></i>
             </div>
           </div>
+
           <div class="carousel-item">
-            <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-            <img :src="`src/assets/img/${devData[1].image}`" alt="" />
+            <div class="img-container">
+              <img :src="`src/assets/img/${devData[1].image}`" alt="" />
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
             <div>
               {{ devData[1].name }}<span> {{ devData[1].role }}</span>
             </div>
@@ -48,8 +52,10 @@ export default {
             </div>
           </div>
           <div class="carousel-item">
-            <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-            <img :src="`src/assets/img/${devData[2].image}`" alt="" />
+            <div class="img-container">
+              <img :src="`src/assets/img/${devData[2].image}`" alt="" />
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
             <div>
               {{ devData[2].name }}
               <span>{{ devData[2].role }}</span>
@@ -93,7 +99,6 @@ export default {
   text-align: center;
   padding: 1rem;
   .content {
-    position: relative;
     .carousel-item span {
       color: #f9aa01;
     }
@@ -101,17 +106,28 @@ export default {
       margin-bottom: 1rem;
     }
 
-    .fa-quote-left {
-      padding: 0.3rem;
-      background-color: #f9aa01;
-      border-radius: 50%;
-      position: absolute;
-      left: 32.5rem;
-      top: 1.3rem;
-    }
-    img {
-      border-radius: 50%;
-      border: 4px solid #f9aa01;
+    .img-container {
+      position: relative;
+      margin: auto;
+      height: 100px;
+      width: 100px;
+      // border-radius: 50%;
+      // border: 4px solid #f9aa01;
+      // overflow: hidden;
+      margin-bottom: 1rem;
+      img {
+        border-radius: 50%;
+        border: 4px solid #f9aa01;
+      }
+      .fa-quote-left {
+        font-size: 1.1em;
+        position: absolute;
+        left: -12px;
+        bottom: 61px;
+        padding: 0.4rem;
+        background-color: #f9aa01;
+        border-radius: 50%;
+      }
     }
     .fa-circle {
       font-size: 0.9em;

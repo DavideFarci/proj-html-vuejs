@@ -385,11 +385,7 @@ export default {
 
     <!-- sezone a tutto schermo -->
     <section class="full_background">
-      <AppDevelopers
-        :devDataOne="partners[0]"
-        :devDataTwo="partners[1]"
-        :devDataThree="partners[2]"
-      />
+      <AppDevelopers :devData="partners" />
     </section>
 
     <div class="container">
