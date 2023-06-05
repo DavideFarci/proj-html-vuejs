@@ -56,7 +56,7 @@ export default {
       </div>
 
       <div class="navigation">
-        <img src="../assets/img/logo.png" alt="logo" />
+        <a href="#"><img src="../assets/img/logo.png" alt="logo" /></a>
         <AppNav :dataNav="this.navbar" />
         <div class="myAccount">
           <div class="i_search">
